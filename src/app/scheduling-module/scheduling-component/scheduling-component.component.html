@@ -1,0 +1,73 @@
+<p>scheduling-component works!</p>
+
+<h3>good luck to do the our scheduling volunteers</h3>
+<form [formGroup]="schedulingForm">
+    <ul >
+        <li>
+            <p><label [class.color]="schedulingForm.value.sunday">sunday:</label>
+                <select formControlName="sunday">
+                    <option value="">select volunteer for Sunday</option>
+                    <option *ngFor="let v of volDays[0]">
+                        <p>{{v.name}}</p>
+                        <!--  -->
+                    </option>
+                </select>
+            </p>
+        </li>
+        <li>
+            <p><label [class.color]="schedulingForm.value.monday">monday:</label>
+                <select formControlName="monday">
+                    <option value="">select volunteer for Monday</option>
+                    <option *ngFor="let v of volDays[1]">
+                        <p>{{v.name}}</p>
+                    </option>
+                </select>
+            </p>
+        </li>
+        <li>
+            <p><label [class.color]="schedulingForm.value.tuesday">tuesday:</label>
+                <select formControlName="tuesday">
+                    <option value="">select volunteer for Tuesday</option>
+                    <option *ngFor="let v of volDays[2]">
+                        <p>{{v.name}}</p>
+                    </option>
+                </select>
+            </p>
+        </li>
+        <li>
+            <p><label [class.color]="schedulingForm.value.wensday">wensday:</label>
+                <select formControlName="wensday">
+                    <option value="">select volunteer for Wensday</option>
+                    <option *ngFor="let v of volDays[3]">
+                        <p>{{v.name}}</p>
+                    </option>
+                </select>
+            </p>
+        </li>
+        <li>
+            <p><label [class.color]="schedulingForm.value.thursday">thursday:</label>
+                <select formControlName="thursday">
+                    <option value="">select volunteer for Thursday</option>
+                    <option *ngFor="let v of volDays[4]">
+                        <p>{{v.name}}</p>
+                    </option>
+                </select>
+            </p>
+        </li>
+        <li>
+            <p><label [class.color]="schedulingForm.value.friday">friday:</label>
+                <select formControlName="friday">
+                    <option value="">select volunteer for Friday</option>
+                    <option *ngFor="let v of volDays[5]" >
+                        <p>{{v.name}}</p>
+                        <!--  -->
+                    </option>
+                </select>
+            </p>
+        </li>
+    </ul>
+    <div>
+
+        <button [disabled]="schedulingForm.invalid" class="btn btn-success"  (click)="saveScheduling()">save Scheduling</button>
+    </div>
+</form>

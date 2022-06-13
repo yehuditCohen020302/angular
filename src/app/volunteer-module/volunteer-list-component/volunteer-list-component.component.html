@@ -1,0 +1,38 @@
+<p>volunteer-list-component works!</p>
+<ul>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-2">
+               <h6>id:</h6> 
+            </div>
+            <div class="col-sm-4">
+              <h6>name:</h6>
+            </div>
+            <div class="col-sm-4">
+            <h6>age:</h6>
+            </div>
+        </div><hr>
+    </li>
+    <li class="list-group-item" *ngFor="let vol of volunteer" >
+        <div class="row">
+            <div class="col-sm-2">
+                {{vol.id}}
+            </div>
+            <div class="col-sm-4">
+               {{vol.name}}
+            </div>
+            <div class="col-sm-4">
+               {{vol.age}}
+            </div>
+            <div >
+                <a routerLink="/VolunteerDetails/{{vol.id}}"> Edit</a>
+                <!-- <a href="/VolunteerDetails/{{vol.id}}">Edit</a> -->
+                <!-- <a href="VolunteerDetails">Edit</a> -->
+
+            </div>    
+        </div>
+        <hr>
+    </li>  
+
+</ul> 
+<hr>

@@ -1,0 +1,47 @@
+<p>volunteer-details-component works!</p>
+
+<h2>welcome to edit details</h2>
+
+    <form [formGroup]="volunteerForm"> 
+        <div class="form-group">
+            <label for="name">volunteer Name:</label>
+            <input type="text" class="form-control" id="name" name="name" formControlName="name" />
+
+        </div>
+        <div class="form-group">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+            <label for="id">volunteer id:</label>
+            <input type="number" class="form-control" id="id" name="id" formControlName="id" />
+        </div>
+        <div class="form-group">
+            <label for="age">volunteer age:</label>
+            <input type="number" id="age" name="age" formControlName="age" />
+        </div>                                                      
+        
+        <div class="form-group">
+            <label for="days">volunteer days: </label>
+            <br>
+            <label >sunday</label>
+            <input type="checkbox" id="day1" formControlName="sunday" (change)="ifChange()"/>
+            <br>
+            <label >monday</label>
+            <input type="checkbox" id="day2" formControlName="monday" (change)="ifChange()"/>         
+            <br>
+            <label >tushday</label>
+            <input type="checkbox" id="day3" formControlName="tuesday" (change)="ifChange()"/>           
+            <br>
+            <label >wensday</label>
+            <input type="checkbox" id="day4" formControlName="wensday" (change)="ifChange()"/>
+            <br>
+            <label >thursday</label>
+            <input type="checkbox" id="day5" formControlName="thursday" (change)="ifChange()"/>
+            <br>
+            <label >friday</label>
+            <input type="checkbox" id="day6" formControlName="friday" (change)="ifChange()"/>
+        </div>
+    <div>
+        <button class="btn btn-success" (click)="saveVolunteer()" [disabled]="volunteerForm.invalid">Save Volunteer</button>
+        <!--    -->
+    </div>
+    </form>
+   
+<!-- </div> -->
